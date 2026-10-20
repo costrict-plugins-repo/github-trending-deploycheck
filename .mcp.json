@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "deploycheck": {
+      "command": "node",
+      "args": ["./server/dist/index.js"]
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "name": "deploycheck",
+  "version": "0.1.0",
+  "description": "Deploy readiness checker MCP server for Claude Code",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "pretty": "prettier --check src/",
+    "pretty:fix": "prettier --write src/",
+    "prettylintfix":"npm run pretty:fix && npm run lint:fix",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "claude-code",
+    "mcp",
+    "deploy",
+    "devops"
+  ],
+  "author": {
+    "name": "Kaveh Taher",
+    "url": "https://github.com/kawehtaher"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "yaml": "^2.7.1",
+    "zod": "^3.24.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^22.19.17",
+    "eslint": "^10.2.0",
+    "prettier": "^3.8.2",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.58.2",
+    "vitest": "^3.1.3"
+  }
+}

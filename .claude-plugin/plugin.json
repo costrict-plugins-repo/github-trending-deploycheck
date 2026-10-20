@@ -1,0 +1,9 @@
+{
+  "name": "deploycheck",
+  "description": "Deploy readiness checker — lets Claude verify if your environments are safe to ship",
+  "version": "0.1.0",
+  "author": {
+    "name": "Kaveh Taher"
+  },
+  "repository": "https://github.com/kawehtaher/deploycheck"
+}

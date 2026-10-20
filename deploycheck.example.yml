@@ -1,0 +1,29 @@
+# deploycheck.yml
+# Place this file in your project root, or set DEPLOYCHECK_CONFIG to its path.
+
+project: my-app
+
+environments:
+  staging:
+    url: https://staging.myapp.com
+    health_endpoint: /api/health
+    docker_image: myapp/api
+    docker_tag_source: git  # "git" or "docker-hub"
+
+  production:
+    url: https://myapp.com
+    health_endpoint: /api/health
+    docker_image: myapp/api
+    docker_tag_source: git
+
+ci:
+  provider: github-actions  # or "gitlab-ci"
+  repo: owner/repo          # GitHub: owner/repo, GitLab: project ID
+  branch: main              # branch to check CI status for
+  # Tokens are read from environment variables:
+  #   GitHub: GITHUB_TOKEN
+  #   GitLab: GITLAB_TOKEN
+
+git:
+  staging_ref: staging       # branch or tag representing staging
+  production_ref: production # branch or tag representing production
